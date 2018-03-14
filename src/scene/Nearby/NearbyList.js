@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { View, Text, FlatList } from 'react-native';
+import PropTypes from 'prop-types';
 
 import NearbyHeader from './NearbyHeader';
 import GroupCell from '../Group/GroupCell';
@@ -7,6 +8,12 @@ import GroupCell from '../Group/GroupCell';
 import api, { recommendUrlWithOffset } from '../../utils/api';
 
 class NearbyList extends PureComponent {
+	static propTypes = {
+		types: PropTypes.array.isRequired,
+		offset: PropTypes.number,
+		navigation: PropTypes.any
+	};
+
 	constructor(props) {
 		super();
 		this.state = {
@@ -28,8 +35,8 @@ class NearbyList extends PureComponent {
 		return <GroupCell info={info.item} onPress={this._onItemSelected} />;
 	};
 
-	_keyExtractor = index => {
-		return index;
+	_keyExtractor = info => {
+		return info.id;
 	};
 
 	_renderHeader = () => {

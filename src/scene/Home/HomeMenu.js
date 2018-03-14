@@ -8,7 +8,7 @@ import { color } from '../../widget';
 
 class HomeMenu extends PureComponent {
 	static propTypes = {
-		menuData: PropTypes.array,
+		menuData: PropTypes.array.isRequired,
 		onMenuSelected: PropTypes.func
 	};
 

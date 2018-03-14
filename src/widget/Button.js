@@ -1,18 +1,17 @@
 import React, { PureComponent } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
 
-// import { color } from './index';
+class Button extends PureComponent {
+	static propTypes = {
+		title: PropTypes.string.isRequired,
+		onPress: PropTypes.func,
+		style: PropTypes.any,
+		titleStyle: PropTypes.any
+	};
 
-type Props = {
-	style: Object,
-	titleStyle: Object,
-	title: String,
-	onPress: Func
-};
-
-class Button extends PureComponent<Props> {
 	render() {
-		let { style, titleStyle, title, onPress } = this.props;
+		let { title, onPress, style, titleStyle } = this.props;
 		return (
 			<TouchableOpacity
 				onPress={() => onPress && onPress()}

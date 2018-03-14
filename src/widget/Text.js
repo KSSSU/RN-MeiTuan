@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, Text } from 'react-native';
+import PropTypes from 'prop-types';
+
 import { color } from './index';
 
 // style属性最简单的方式是JavaScript对象类型，也可写成数组类型；在数组类型中，优先加载最后的元素，因此可应用于继承中

@@ -72,7 +72,8 @@ export default {
 			'桌游电玩'
 		],
 		[]
-	]
+	],
+	orderMenu: ['全部', '待付款', '待使用', '待评论', '退款/售后']
 };
 
 export function recommendUrlWithOffset(offset: string) {

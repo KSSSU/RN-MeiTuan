@@ -1,10 +1,17 @@
 import React, { PureComponent } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { color, Button } from '../../widget';
 import { screen } from '../../common';
 
 class NearbyHeader extends PureComponent {
+	static propTypes = {
+		titles: PropTypes.array.isRequired,
+		selectIndex: PropTypes.number.isRequired,
+		onSelectType: PropTypes.func.isRequired
+	};
+
 	render() {
 		return (
 			<View style={styles.container}>

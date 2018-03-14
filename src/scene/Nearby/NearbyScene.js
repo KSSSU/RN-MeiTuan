@@ -12,20 +12,15 @@ class NearbyScene extends PureComponent {
 		headerTitle: '吃喝玩乐',
 		headerStyle: {
 			backgroundColor: color.white,
+
 			// elevation属性是android去掉导航条底的阴影
 			elevation: 0,
 			// shadowOpacity属性是iOS去掉导航条底的阴影
 			shadowOpacity: 0
 		},
-		headerTitleStyle: { alignSelf: 'center' },
+		headerTitleStyle: { color: color.white, alignSelf: 'center' },
 		// 是否支持滑动返回手势，iOS默认支持，安卓默认关闭
 		gesturesEnabled: true
-		// headerRight: (
-		// 	<NavigationItem
-		// 		icon={require('../../img/public/icon_navigation_item_share.png')}
-		// 		onPress={() => {}}
-		// 	/>
-		// )
 	});
 
 	render() {

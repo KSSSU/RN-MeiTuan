@@ -3,6 +3,7 @@ export default {
 	border: '#e0e0e0',
 	paper: '#f3f3f3',
 	black: '#222222',
+	lightBlack: '#555555',
 	white: '#ffffff',
 	gray: '#777777',
 	lightGray: '#979797',

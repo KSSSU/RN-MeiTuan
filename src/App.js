@@ -12,6 +12,7 @@ import HomeScene from './scene/Home/HomeScene';
 import GroupScene from './scene/Group/GroupScene';
 import NearbyScene from './scene/Nearby/NearbyScene';
 import OrderScene from './scene/Order/OrderScene';
+import OrderInfoScene from './scene/Order/OrderInfoScene';
 import MineScene from './scene/Mine/MineScene';
 
 import TabBarItem from './widget/TabBarItem';
@@ -105,8 +106,9 @@ const Tab = TabNavigator(
 const Navigator = StackNavigator(
 	{
 		Tab: { screen: Tab },
+		GroupScene: { screen: GroupScene },
+		OrderInfoScene: { screen: OrderInfoScene }
 		// Web: { screen: WebScene },
-		GroupScene: { screen: GroupScene }
 	},
 	{
 		// 设置顶部导航栏的一些参数设置和跳转方式

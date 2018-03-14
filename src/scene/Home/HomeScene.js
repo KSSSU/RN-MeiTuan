@@ -10,10 +10,6 @@ import { color } from '../../widget';
 
 import api, { recommendUrlWithOffset } from '../../utils/api';
 
-// type Props = {
-// 	navigation: any
-// };
-
 // type State = {
 // 	discounts: Array<Object>,
 // 	dataList: Array<Object>,

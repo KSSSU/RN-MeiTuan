@@ -1,8 +1,15 @@
 import React, { PureComponent } from 'react';
 import { Image } from 'react-native';
+import PropTypes from 'prop-types';
 
-// type Props = {};
-class TabBarItem extends PureComponent<> {
+class TabBarItem extends PureComponent {
+	static propTypes = {
+		focused: PropTypes.bool.isRequired,
+		selectedImage: PropTypes.any.isRequired,
+		normalImage: PropTypes.any.isRequired,
+		tintColor: PropTypes.string.isRequired
+	};
+
 	render() {
 		return (
 			<Image
