@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
-import OrderListHeader from './OrderListHeader';
+import OrderNoList from './OrderNoList';
 import { color } from '../../widget';
 
 class OrderList extends PureComponent {
@@ -19,14 +19,9 @@ class OrderList extends PureComponent {
 	}
 
 	_keyExtractor = () => {};
-	_renderHeader = () => {
-		return (
-			<View>
-				{this.state.dataList.length ? null : (
-					<OrderListHeader onNavigation={() => this.props.onNavigation()} />
-				)}
-			</View>
-		);
+	_renderHeader = () => {};
+	_renderEmpty = () => {
+		return <OrderNoList onNavigation={() => this.props.onNavigation()} />;
 	};
 	_renderItem = () => {};
 	_onRefresh = () => {};
@@ -45,8 +40,8 @@ class OrderList extends PureComponent {
 				onRefresh={this._onRefresh}
 				// 在等待加载新数据时将此属性设为true，列表就会显示出一个正在加载的符号。
 				refreshing={this.state.refreshing}
-				// 头部组件
-				ListHeaderComponent={this._renderHeader}
+				// 没有数据时渲染
+				ListEmptyComponent={this._renderEmpty}
 			/>
 		);
 	}

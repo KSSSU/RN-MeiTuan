@@ -5,7 +5,7 @@ import { Button, color } from '../../widget';
 import { Header2 } from '../../widget/Text';
 import { screen } from '../../common';
 
-class OrderListHeader extends PureComponent {
+class OrderNoList extends PureComponent {
 	_onhandlePress = () => {
 		this.props.onNavigation();
 	};
@@ -52,4 +52,4 @@ const styles = StyleSheet.create({
 	}
 });
 
-export default OrderListHeader;
+export default OrderNoList;

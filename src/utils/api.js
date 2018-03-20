@@ -49,6 +49,7 @@ export default {
 	],
 
 	titles: ['享美食', '住酒店', '爱玩乐', '全部'],
+
 	types: [
 		[
 			'热门',
@@ -73,10 +74,71 @@ export default {
 		],
 		[]
 	],
-	orderMenu: ['全部', '待付款', '待使用', '待评论', '退款/售后']
+
+	orderMenu: ['全部', '待付款', '待使用', '待评论', '退款/售后'],
+
+	menuMain: [
+		{
+			title: '收藏',
+			image: require('../img/mine/icon_mine_collection.png')
+		},
+		{
+			title: '评价',
+			image: require('../img/mine/icon_mine_comment.png')
+		},
+		{
+			title: '足迹',
+			image: require('../img/mine/icon_mine_friends.png')
+		}
+	],
+
+	menuWallet: [
+		{
+			title: '我的钱包',
+			subtitle: '办信用卡',
+			image: require('../img/mine/icon_mine_wallet.png')
+		},
+		{
+			title: '余额',
+			subtitle: '￥95872385',
+			image: require('../img/mine/icon_mine_balance.png')
+		},
+		{
+			title: '抵用券',
+			subtitle: '63',
+			image: require('../img/mine/icon_mine_voucher.png')
+		},
+		{
+			title: '会员卡',
+			subtitle: '2',
+			image: require('../img/mine/icon_mine_membercard.png')
+		}
+	],
+
+	menuAccount: [
+		{
+			title: '会员中心',
+			subtitle: 'v15',
+			image: require('../img/mine/icon_mine_membercenter.png')
+		},
+		{
+			title: '积分商城',
+			subtitle: '好礼已上线',
+			image: require('../img/mine/icon_mine_member.png')
+		},
+		{
+			title: '客服中心',
+			image: require('../img/mine/icon_mine_customerService.png')
+		},
+		{
+			title: '关于美团',
+			subtitle: '我要合作',
+			image: require('../img/mine/icon_mine_aboutmeituan.png')
+		}
+	]
 };
 
-export function recommendUrlWithOffset(offset: string) {
+export function recommendUrlWithOffset(offset) {
 	return (
 		'http://api.meituan.com/group/v1/recommend/homepage/city/1?__skck=40aaaf01c2fc4801b9c059efcd7aa146&__skcy=mrUZYo7999nH8WgTicdfzaGjaSQ=&__skno=51156DC4-B59A-4108-8812-AD05BF227A47&__skts=1434530933.303717&__skua=bd6b6e8eadfad15571a15c3b9ef9199a&__vhost=api.mobile.meituan.com&ci=1&client=iphone&limit=40&movieBundleVersion=100&msid=48E2B810-805D-4821-9CDD-D5C9E01BC98A2015-06-17-14-50363&offset=' +
 		offset +
@@ -84,7 +146,7 @@ export function recommendUrlWithOffset(offset: string) {
 	);
 }
 
-export function recommendUrlWithId(id: string) {
+export function recommendUrlWithId(id) {
 	return (
 		'http://api.meituan.com/group/v1/deal/recommend/collaborative?__skck=40aaaf01c2fc4801b9c059efcd7aa146&__skcy=hWCwhGYpNTG7TjXWHOwPykgoKX0%3D&__skno=433ACF85-E134-4FEC-94B5-DA35D33AC753&__skts=1436343274.685593&__skua=bd6b6e8eadfad15571a15c3b9ef9199a&__vhost=api.mobile.meituan.com&cate=0&ci=1&cityId=1&client=iphone&did=' +
 		id +
@@ -92,7 +154,7 @@ export function recommendUrlWithId(id: string) {
 	);
 }
 
-export function groupPurchaseDetailWithId(id: string) {
+export function groupPurchaseDetailWithId(id) {
 	return (
 		'http://api.meituan.com/group/v1/deal/list/id/' +
 		id +

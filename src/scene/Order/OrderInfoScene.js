@@ -27,7 +27,7 @@ class OrderInfoScene extends PureComponent {
 	constructor(porps) {
 		super(porps);
 		this.state = {
-			initialPage: 2
+			initialPage: 0
 		};
 	}
 

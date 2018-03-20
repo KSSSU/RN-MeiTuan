@@ -144,7 +144,7 @@ class NearbyList extends PureComponent {
 				// 在等待加载新数据时将此属性设为true，列表就会显示出一个正在加载的符号。
 				refreshing={this.state.refreshing}
 				// 设置滚动到底的值
-				onEndReachedThreshold={0}
+				onEndReachedThreshold={0.1}
 				// 滚动到指定值时触发
 				onEndReached={this._onload}
 				// 头部组件

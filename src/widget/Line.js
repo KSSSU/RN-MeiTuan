@@ -2,9 +2,11 @@ import React, { PureComponent } from 'react';
 import { View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
+import color from './color';
+
 class Line extends PureComponent {
 	static propTypes = {
-		style: PropTypes.object
+		style: PropTypes.any
 	};
 
 	render() {
@@ -14,7 +16,7 @@ class Line extends PureComponent {
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: '#eee',
+		backgroundColor: color.border,
 		height: 10
 	}
 });

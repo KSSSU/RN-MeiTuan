@@ -90,6 +90,7 @@ const Tab = TabNavigator(
 		lazy: true,
 		animationEnabled: false,
 		swipeEnabled: false,
+		initialRouteName: 'Mine',
 		tabBarOptions: {
 			// 选中状态的颜色
 			activeTintColor: color.primary,
@@ -97,7 +98,16 @@ const Tab = TabNavigator(
 			inactiveTintColor: color.black,
 			// 显示图标
 			showIcon: true,
-			style: { backgroundColor: color.white }
+			style: {
+				backgroundColor: color.white,
+				borderTopWidth: 1,
+				borderColor: '#ddd',
+				height: 54
+			},
+			labelStyle: {
+				fontSize: 12,
+				margin: 0
+			}
 		}
 	}
 );
@@ -114,7 +124,13 @@ const Navigator = StackNavigator(
 		// 设置顶部导航栏的一些参数设置和跳转方式
 		navigationOptions: {
 			// 屏幕导航的默认选项, 也可以在组件内用 static navigationOptions 设置(会覆盖此处的设置)
-			headerStyle: { backgroundColor: color.primary },
+			headerStyle: {
+				backgroundColor: color.primary,
+				// elevation属性是android去掉导航条底的阴影
+				elevation: 0,
+				// shadowOpacity属性是iOS去掉导航条底的阴影
+				shadowOpacity: 0
+			},
 			headerBackTitle: 'null',
 			headerTintColor: color.black,
 			showIcon: true
