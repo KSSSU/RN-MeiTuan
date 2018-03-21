@@ -2,11 +2,11 @@
 
 ## screen shot for Android
 
-<img src="https://github.com/KSSSU/RN-MeiTuan/screenshot/1.png">
+<img src="https://github.com/KSSSU/RN-MeiTuan/blob/master/screenshot/1.png">
 
-<img src="https://github.com/KSSSU/RN-MeiTuan/screenshot/2.png">
+<img src="https://github.com/KSSSU/RN-MeiTuan/blob/master/screenshot/2.png">
 
-<img src="https://github.com/KSSSU/RN-MeiTuan/screenshot/3.png">
+<img src="https://github.com/KSSSU/RN-MeiTuan/blob/master/screenshot/3.png">
 
 # 仿美团 APP - React-Native(0.54)版本
 
