@@ -7,14 +7,6 @@ import color from './color';
 import { screen } from '../common';
 
 class MenuItem extends PureComponent {
-	static propTypes = {
-		title: PropTypes.string.isRequired,
-		icon: PropTypes.any.isRequired,
-		iconStyle: PropTypes.any,
-		numColumns: PropTypes.number,
-		onhandlePress: PropTypes.func.isRequired
-	};
-
 	render() {
 		let { title, icon, iconStyle, numColumns, onhandlePress } = this.props;
 		const itemStyle = {
@@ -49,5 +41,13 @@ const styles = StyleSheet.create({
 		marginTop: 3
 	}
 });
+
+MenuItem.propTypes = {
+	title: PropTypes.string.isRequired,
+	icon: PropTypes.any.isRequired,
+	iconStyle: PropTypes.any,
+	numColumns: PropTypes.number,
+	onhandlePress: PropTypes.func.isRequired
+};
 
 export default MenuItem;

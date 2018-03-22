@@ -18,7 +18,7 @@ class OrderMenu extends PureComponent {
 		return (
 			<TouchableOpacity
 				style={styles.container}
-				onPress={() => onhandlePress(title)}
+				onPress={() => onhandlePress()}
 			>
 				<Image style={styles.icon} source={icon} />
 				<Header3 style={styles.title}>{title}</Header3>

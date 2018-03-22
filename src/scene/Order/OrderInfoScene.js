@@ -36,14 +36,12 @@ class OrderInfoScene extends PureComponent {
 		this._getInitialPage();
 	}
 
-	// 根据传过来的data值来判断当前Tab的下标
+	// 根据传过来的index值来判断当前Tab的下标
 	_getInitialPage = () => {
-		const menus = api.orderMenu;
-		let info = this.props.navigation.state.params.data;
-		let index = menus.indexOf(info);
+		const index = this.props.navigation.state.params.index;
 
 		if (index > -1) {
-			this.setState({ initialPage: index });
+			this.setState({ initialPage: index + 1 });
 		} else {
 			this.setState({ initialPage: 0 });
 		}
@@ -61,10 +59,10 @@ class OrderInfoScene extends PureComponent {
 				tabBarUnderlineStyle={styles.underLine}
 				initialPage={this.state.initialPage}
 			>
-				{menus.map((title, i) => (
+				{menus.map((menu, i) => (
 					<OrderList
 						key={i}
-						tabLabel={menus[i]}
+						tabLabel={menu.title}
 						onNavigation={() => this.props.navigation.navigate('Home')}
 					/>
 				))}

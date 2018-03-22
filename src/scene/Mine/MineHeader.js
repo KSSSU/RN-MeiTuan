@@ -9,21 +9,35 @@ import { screen } from '../../common';
 class MineHeader extends PureComponent {
 	render() {
 		let menus = this.props.menus;
-		let cells = [];
-		for (let index = 0; index < menus.length; index++) {
-			const element = menus[index];
-			const cell = (
-				<MenuItem
-					key={index}
-					title={element.title}
-					icon={element.image}
-					iconStyle={styles.icon}
-					numColumns={3}
-					onhandlePress={title => alert(title)}
-				/>
-			);
-			cells.push(cell);
-		}
+
+		// 函数式编程
+		const cells = menus.map((element, index) => (
+			<MenuItem
+				key={index}
+				title={element.title}
+				icon={element.image}
+				iconStyle={styles.icon}
+				numColumns={3}
+				onhandlePress={title => alert(title)}
+			/>
+		));
+
+		// 相当于 => 过程式编程
+		// let cells = [];
+		// for (let index = 0; index < menus.length; index++) {
+		// 	const element = menus[index];
+		// 	const cell = (
+		// 		<MenuItem
+		// 			key={index}
+		// 			title={element.title}
+		// 			icon={element.image}
+		// 			iconStyle={styles.icon}
+		// 			numColumns={3}
+		// 			onhandlePress={title => alert(title)}
+		// 		/>
+		// 	);
+		// 	cells.push(cell);
+		// }
 
 		return (
 			<View style={styles.container}>

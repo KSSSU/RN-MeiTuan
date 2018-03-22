@@ -28,6 +28,22 @@ class OrderScene extends PureComponent {
 	}
 
 	_renderHeader = () => {
+		// 筛选出下标大于0的数据并遍历，即是把title='全部'的数据筛选掉
+		const menus = api.orderMenu
+			.filter((menu, index) => index > 0)
+			.map((menu, index) => (
+				<OrderMenu
+					key={index}
+					title={menu.title}
+					icon={menu.image}
+					onhandlePress={() => {
+						this.props.navigation.navigate('OrderInfoScene', {
+							index: index
+						});
+					}}
+				/>
+			));
+
 		return (
 			<View>
 				<OrderCaption
@@ -38,36 +54,7 @@ class OrderScene extends PureComponent {
 					}}
 				/>
 
-				<View style={styles.menuContainer}>
-					<OrderMenu
-						title="待付款"
-						icon={require('../../img/order/order_tab_need_pay.png')}
-						onhandlePress={title => {
-							this.props.navigation.navigate('OrderInfoScene', { data: title });
-						}}
-					/>
-					<OrderMenu
-						title="待使用"
-						icon={require('../../img/order/order_tab_need_use.png')}
-						onhandlePress={title => {
-							this.props.navigation.navigate('OrderInfoScene', { data: title });
-						}}
-					/>
-					<OrderMenu
-						title="待评论"
-						icon={require('../../img/order/order_tab_need_review.png')}
-						onhandlePress={title => {
-							this.props.navigation.navigate('OrderInfoScene', { data: title });
-						}}
-					/>
-					<OrderMenu
-						title="退款/售后"
-						icon={require('../../img/order/order_tab_needoffer_aftersale.png')}
-						onhandlePress={title => {
-							this.props.navigation.navigate('OrderInfoScene', { data: title });
-						}}
-					/>
-				</View>
+				<View style={styles.menuContainer}>{menus}</View>
 
 				<Line />
 

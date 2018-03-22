@@ -9,20 +9,33 @@ import { screen } from '../../common';
 class MineMenu extends PureComponent {
 	render() {
 		let { title, data } = this.props;
-		let cells = [];
-		for (let index = 0; index < data.length; index++) {
-			const element = data[index];
-			const cell = (
-				<MenuItem
-					key={index}
-					title={element.title}
-					icon={element.image}
-					iconStyle={styles.icon}
-					onhandlePress={title => alert(title)}
-				/>
-			);
-			cells.push(cell);
-		}
+
+		// 函数式编程
+		const cells = data.map((element, index) => (
+			<MenuItem
+				key={index}
+				title={element.title}
+				icon={element.image}
+				iconStyle={styles.icon}
+				onhandlePress={title => alert(title)}
+			/>
+		));
+
+		// 相当于 => 过程式编程
+		// const cells = [];
+		// for (let index = 0; index < data.length; index++) {
+		// 	const element = data[index];
+		// 	const cell = (
+		// 		<MenuItem
+		// 			key={index}
+		// 			title={element.title}
+		// 			icon={element.image}
+		// 			iconStyle={styles.icon}
+		// 			onhandlePress={title => alert(title)}
+		// 		/>
+		// 	);
+		// 	cells.push(cell);
+		// }
 
 		return (
 			<View>
@@ -37,7 +50,6 @@ const styles = StyleSheet.create({
 	cellContainer: {
 		flexDirection: 'row',
 		flexWrap: 'wrap',
-		// justifyContent: 'center',
 		alignItems: 'center'
 	},
 	title: {

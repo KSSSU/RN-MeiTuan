@@ -90,7 +90,7 @@ const Tab = TabNavigator(
 		lazy: true,
 		animationEnabled: false,
 		swipeEnabled: false,
-		initialRouteName: 'Mine',
+		initialRouteName: 'Home',
 		tabBarOptions: {
 			// 选中状态的颜色
 			activeTintColor: color.primary,

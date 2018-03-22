@@ -20,9 +20,14 @@ class MineScene extends PureComponent {
 		headerRight: (
 			<NavButton
 				icon={require('../../img/mine/icon_navigation_item_message_white.png')}
-				onPress={() => navigation.navigate('Order')}
+				onPress={() => navigation.navigate('Mine')}
 			/>
-		)
+		),
+		headerStyle: {
+			backgroundColor: color.white,
+			elevation: 0,
+			shadowOpacity: 0
+		}
 	});
 
 	constructor(props) {
