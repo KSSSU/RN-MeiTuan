@@ -1,6 +1,6 @@
 # MeiTuan App Write In React-Native(0.54)
 
-## screen shot for Android
+## screenshot for Android
 
 <img src="https://github.com/KSSSU/RN-MeiTuan/blob/master/screenshot/1.png">
 
@@ -40,6 +40,7 @@ App 的页面跳转、TabBar、Navigation，全部通过[react-navigation](https
 
 * [react-navigation](https://github.com/react-community/react-navigation)
 * [react-native-scrollable-tab-view](https://github.com/skv-headless/react-native-scrollable-tab-view)
+* [react-native-swiper](https://github.com/leecade/react-native-swiper)
 
 ## 安装
 
