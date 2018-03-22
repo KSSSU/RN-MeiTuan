@@ -2,24 +2,33 @@ import React, { PureComponent } from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 import PropTypes from 'prop-types';
 
-import HomeMenu from '../Home/HomeMenu';
+import HomeMenu from './HomeMenu';
+import HomeSwiper from './HomeSwiper';
+import SearchBar from './SearchBar';
 import GroupCell from '../Group/GroupCell';
 
-import { Header1, Header2, Header3, Paragraph } from '../../widget/Text';
-import { color } from '../../widget';
+import { Header1, Header2, Header3 } from '../../widget/Text';
+import { color, NavButton } from '../../widget';
 
 import api, { recommendUrlWithOffset } from '../../utils/api';
 
-// type State = {
-// 	discounts: Array<Object>,
-// 	dataList: Array<Object>,
-// 	refreshing: boolean
-// };
-
 class HomeScene extends PureComponent {
-	static propTypes = {
-		navigation: PropTypes.any
-	};
+	static navigationOptions = ({ navigation }) => ({
+		headerLeft: (
+			<NavButton
+				title="北京"
+				titleStyle={{ fontSize: 16 }}
+				onPress={() => navigation.navigate('Home')}
+			/>
+		),
+		headerTitle: <SearchBar />,
+		headerRight: (
+			<NavButton
+				icon={require('../../img/mine/icon_navigation_item_message_white.png')}
+				onPress={() => navigation.navigate('Mine')}
+			/>
+		)
+	});
 
 	constructor(props) {
 		super(props);
@@ -47,6 +56,7 @@ class HomeScene extends PureComponent {
 	_renderHeader = () => {
 		return (
 			<View>
+				<HomeSwiper />
 				<HomeMenu
 					menuData={api.menuInfo}
 					onMenuSelected={this._onMenuSelected}
@@ -183,7 +193,12 @@ const styles = StyleSheet.create({
 		borderBottomWidth: 1,
 		borderColor: color.border,
 		backgroundColor: color.white
-	}
+	},
+	searchBar: {}
 });
+
+HomeScene.propTypes = {
+	navigation: PropTypes.any
+};
 
 export default HomeScene;
