@@ -6,23 +6,20 @@ import { Header3, Paragraph } from './Text';
 import color from './color';
 import { screen } from '../common';
 
-class MenuItem extends PureComponent {
-	render() {
-		let { title, icon, iconStyle, numColumns, onhandlePress } = this.props;
-		const itemStyle = {
-			width: screen.width / (numColumns || 4) - 15
-		};
+export default function MenuItem({ title, icon, numColumns, onhandlePress }) {
+	const itemStyle = {
+		width: screen.width / (numColumns || 4) - 15
+	};
 
-		return (
-			<TouchableOpacity
-				style={[styles.container, itemStyle]}
-				onPress={() => onhandlePress(title)}
-			>
-				<Image style={[styles.icon, iconStyle]} source={icon} />
-				<Header3 style={styles.title}>{title}</Header3>
-			</TouchableOpacity>
-		);
-	}
+	return (
+		<TouchableOpacity
+			style={[styles.container, itemStyle]}
+			onPress={() => onhandlePress(title)}
+		>
+			{icon ? <Image style={styles.icon} source={icon} /> : null}
+			{title ? <Header3 style={styles.title}>{title}</Header3> : null}
+		</TouchableOpacity>
+	);
 }
 
 const styles = StyleSheet.create({
@@ -31,10 +28,9 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 		// width: screen.width / 4
 	},
-
 	icon: {
-		width: 40,
-		height: 40
+		width: 30,
+		height: 30
 	},
 	title: {
 		color: color.gray,
@@ -45,9 +41,6 @@ const styles = StyleSheet.create({
 MenuItem.propTypes = {
 	title: PropTypes.string.isRequired,
 	icon: PropTypes.any.isRequired,
-	iconStyle: PropTypes.any,
 	numColumns: PropTypes.number,
 	onhandlePress: PropTypes.func.isRequired
 };
-
-export default MenuItem;

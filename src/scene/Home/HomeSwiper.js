@@ -11,8 +11,8 @@ class HomeSwiper extends PureComponent {
 	render() {
 		return (
 			<Swiper
+				autoplay
 				style={styles.wrapper}
-				autoplay={true}
 				dotColor={color.border}
 				activeDotColor={color.primary}
 				paginationStyle={{ bottom: 10 }}

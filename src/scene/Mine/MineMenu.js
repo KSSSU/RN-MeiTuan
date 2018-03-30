@@ -16,7 +16,6 @@ class MineMenu extends PureComponent {
 				key={index}
 				title={element.title}
 				icon={element.image}
-				iconStyle={styles.icon}
 				onhandlePress={title => alert(title)}
 			/>
 		));
@@ -56,10 +55,6 @@ const styles = StyleSheet.create({
 		fontSize: 14,
 		marginBottom: 15,
 		color: color.lightBlack
-	},
-	icon: {
-		width: 30,
-		height: 30
 	}
 });
 

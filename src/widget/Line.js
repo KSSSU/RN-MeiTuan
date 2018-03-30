@@ -4,14 +4,8 @@ import PropTypes from 'prop-types';
 
 import color from './color';
 
-class Line extends PureComponent {
-	static propTypes = {
-		style: PropTypes.any
-	};
-
-	render() {
-		return <View style={[styles.container, this.props.style]} />;
-	}
+export default function Line({ style }) {
+	return <View style={[styles.container, style]} />;
 }
 
 const styles = StyleSheet.create({
@@ -21,4 +15,6 @@ const styles = StyleSheet.create({
 	}
 });
 
-export default Line;
+Line.prototype = {
+	style: PropTypes.any
+};

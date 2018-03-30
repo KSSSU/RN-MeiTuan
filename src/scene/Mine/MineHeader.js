@@ -16,7 +16,6 @@ class MineHeader extends PureComponent {
 				key={index}
 				title={element.title}
 				icon={element.image}
-				iconStyle={styles.icon}
 				numColumns={3}
 				onhandlePress={title => alert(title)}
 			/>
@@ -86,10 +85,6 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		justifyContent: 'center',
 		alignItems: 'center'
-	},
-	icon: {
-		width: 30,
-		height: 30
 	}
 });
 
