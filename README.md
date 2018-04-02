@@ -24,8 +24,6 @@
 
 App 的页面跳转、TabBar、Navigation，全部通过[react-navigation](https://github.com/react-community/react-navigation)实现。
 
-但也躺过不少的坑，比如用 Static 不会覆盖默认的参数配置，goBack()不会返回首页等等，自己还需要更进一步去研究学习。
-
 学习的途径基本上是看官方文档，跟实例做，研究 Github 上的其它项目，搜索资料，然后就是投入热情、持续地去学习、练习、学习、练习。
 
 ## 学习资料
