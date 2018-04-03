@@ -18,18 +18,18 @@
 
 主要实现了美团的四个一级页面（团购、附近、订单、我的），以及部分二级页面（团购详情）。
 
-这也是一个练习项目，参考另外一些项目，代码尽量简单直观并写上注释，以好自己更好地去理解和学习。
+这也是一个练习项目，代码尽量简单直观并写上注释，以好自己更好地去理解和学习。
 
 因为缺少 API，页面很多是使用同一套的接口去实现请求。
 
-App 的页面跳转、TabBar、Navigation，全部通过[react-navigation](https://github.com/react-community/react-navigation)实现。
+App 的页面跳转、TabBar、Navigation，是通过[react-navigation](https://github.com/react-community/react-navigation)实现。
 
-学习的途径基本上是看官方文档，跟实例做，研究 Github 上的其它项目，搜索资料，然后就是投入热情、持续地去学习、练习、学习、练习。
+学习的途径基本上是看官方文档，看源码，跟实例做，研究 Github 上的其它项目，搜索资料，然后就是投入热情、持续地去学习、练习、学习、练习。
 
 ## 学习资料
 
 * [React 官方中文](https://doc.react-china.org/)
-* [React-native 中文网](https://reactnative.cn/)
+* [React-native 官网](http://facebook.github.io/react-native/)
 * [ES6 入门](http://es6.ruanyifeng.com/)
 * [React 入门实例](http://www.ruanyifeng.com/blog/2015/03/react.html)
 * [React 小书](http://huziketang.com/books/react/)
