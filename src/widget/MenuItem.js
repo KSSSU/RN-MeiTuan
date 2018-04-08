@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { Image, StyleSheet, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { Header3, Paragraph } from './Text';
+import { Header3 } from './Text';
 import color from './color';
 import { screen } from '../common';
 

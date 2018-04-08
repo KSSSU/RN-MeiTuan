@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 
 import Swiper from 'react-native-swiper';
 
@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
 	},
 	banner: {
 		flex: 1,
-		width: '100%'
+		width: undefined,
+		height: undefined
 	}
 });
 
